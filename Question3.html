@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test3</title>
+</head>
+<body>
+
+<script>
+    function ifPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function sumOfListPrime(x) {
+        let SUM = 0;
+        for (let i = 0; i <= x; i++) {
+            if (ifPrime(i)) {
+                SUM += i;
+            }
+        }
+        return SUM;
+    }
+
+    const x = 245;
+    const Result = sumOfListPrime(x);
+    console.log(Result);
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test2</title>
+</head>
+<body>
+
+
+<script>
+function insertNumberToArray(arr, x, index){
+        const resultArray = [];
+
+        if (index < 0 || index > arr.length) {
+            return arr;
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            if (i === index) {
+                resultArray.push(x);
+            }
+            resultArray.push(arr[i]);
+        }
+        if (index === arr.length) {
+            resultArray.push(x);
+        }
+        return resultArray;
+
+}
+
+    const numbers = [8, 4, 6, 6,8,5,9];
+    const newNumber = 20;
+    const position = 2;
+    const result = insertNumberToArray(numbers, newNumber, position);
+    console.log(result);
+</script>
+</body>
+</html>
